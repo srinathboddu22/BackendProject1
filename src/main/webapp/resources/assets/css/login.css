@@ -1,0 +1,47 @@
+body.register-body{
+  background-image:none;
+}
+
+body.login-body{
+  background-image:none;
+}
+
+h1.login-h1{
+  background-color:#3a75c4;
+  color:#ffffff;
+  font-family:cursive;
+  margin-top:0px;
+  padding:20px;
+}
+
+input{
+  border-radius:5%;
+  width:60%;
+}
+
+div.row.login-row{
+  padding-top:30px;
+  padding-bottom:30px;
+}
+
+div.col-lg-offset-2.col-md-8.col-md-offset-3.col-sm-offset-3.col-xs-12{
+  margin-left:180px;
+}
+
+div.col-lg-offset-2.col-md-8.col-md-offset-3.col-sm-offset-3.col-xs-12{
+  margin-left:200px;
+}
+
+p.login-para{
+  font-size:18px;
+  font-weight:600;
+  font-family:cursive;
+ 
+}
+
+div.well.login-div{
+  width:70%;
+  margin:0px auto;
+  margin-top:100px;
+}
+

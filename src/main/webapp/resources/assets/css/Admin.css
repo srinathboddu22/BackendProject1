@@ -1,0 +1,25 @@
+nav.navbar.navbar-default{
+  background-color:#3a75c4;
+  font-size:18px;
+  font-weight:600;
+  font-family:cursive;
+  color:#ffffff;
+}
+
+div.row{
+  padding:10px;
+}
+
+div.well{
+  width:70%;
+  margin:0 auto;
+}
+
+form{
+  margin-top:80px;
+}
+
+p{
+  font-size:18px;
+}
+
