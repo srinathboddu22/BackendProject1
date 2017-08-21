@@ -20,6 +20,7 @@ import com.springproject.dao.CategoryDAO;
 import com.springproject.dao.CategoryDAOImpl;
 import com.springproject.dao.UserDAO;
 import com.springproject.dao.UserDAOImpl;
+import com.springproject.model.Cart;
 import com.springproject.model.Category;
 import com.springproject.model.Product;
 import com.springproject.model.Supplier;
@@ -63,6 +64,7 @@ public class HbConfig {
 		sessionBuilder.addAnnotatedClasses(Category.class);
 		sessionBuilder.addAnnotatedClasses(Product.class);
 		sessionBuilder.addAnnotatedClasses(Supplier.class);
+		sessionBuilder.addAnnotatedClasses(Cart.class);
 		System.out.println("Session");
 		
 		return sessionBuilder.buildSessionFactory();

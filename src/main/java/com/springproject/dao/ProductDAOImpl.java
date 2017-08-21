@@ -43,7 +43,7 @@ public class ProductDAOImpl implements ProductDAO {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().delete(getProduct(Proid));
 	}
-
+@Transactional
 	public Product getProduct(int Proid) {
 		// TODO Auto-generated method stub
 		return (Product)sessionFactory.getCurrentSession().get(Product.class, Proid);

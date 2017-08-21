@@ -33,7 +33,7 @@ ${users.id}
 	</div></td>
 			
 		</tr>	
-		<form action="../addtoCart/${users.id}/${product.productid}">
+		<form action="addToCart/${product.productid}">
 								<input type="submit" value="Add to Cart"
 									class="btn btn-primary">
 

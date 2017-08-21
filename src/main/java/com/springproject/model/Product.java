@@ -32,7 +32,7 @@ public class Product implements Serializable
 	private MultipartFile image;
 	private int Catid;
 	private int Supid ;
-	private Float price;
+	private int price;
 	private int stock;
 	
 
@@ -69,11 +69,11 @@ public class Product implements Serializable
 		this.productDescription = productDescription;
 	}
 
-	public Float getPrice() {
+	public int getPrice() {
 		return price;
 	}
 
-	public void setPrice(Float price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 

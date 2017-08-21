@@ -5,34 +5,87 @@
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.List"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sports</title>
+    <link rel="stylesheet" href="<c:url value="/resources/assets/bootstrap/css/bootstrap.min.css"/>">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/fonts/font-awesome.min.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/styles.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Pretty-Header.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Pretty-Footer.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Google-Style-Login.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Pretty-Registration-Form.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Bootstrap-Payment-Form.css"/>">
 </head>
+
 <body>
-<h1></h1>
-<form:form action="supplier.do" method="POST" modelAttribute="supplier" commandName="supplier">
-	<table>
-		<tr>
-			<td><form:label path="supplierid">supplier id</form:label> </td>
-			<td><form:input path="supplierid" /></td>
-		</tr>
-		<tr>
-			<td><form:label path="supplierName">supplier name</form:label></td>
-			<td><form:input path="supplierName" /></td>
-		</tr>
-		<tr>
-		
-			<td colspan="2">
-				<input type="submit" name="action" value="Add" />
-				<input type="submit" name="action" value="Edit" />
-				<input type="submit" name="action" value="Delete" />
-				<input type="submit" name="action" value="Search" />
-			</td>
-		</tr>
-	</table>
-</form:form>
+    
+    <form:form action="supplier.do" method="POST" modelAttribute="supplier" commandName="supplier">
+    <div class="page-header">
+    
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand navbar-link" href="#"> </a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li role="presentation"><a href="#">Category </a></li>
+                        <li role="presentation"><a href="#">Product </a></li>
+                        <li class="active" role="presentation"><a href="#">Supplier </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h1>Welcome !! <small class="text-success">Enter the Supplier Details</small></h1></div>
+        
+    <div class="container">
+        <div class="well">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <form:label path="supplierid">Supplier Id </form:label>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <form:input class="form-control input-sm" path="supplierid" type="text"/>
+                </div>
+            </div>
+        </div>
+        <div class="well">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <form:label path="supplierName">Supplier Name </form:label>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <form:input class="form-control" path="supplierName" type="text"/>
+                </div>
+            </div>
+        </div>
+        <div class="well">
+         
+            <div class="row">
+                <div class="col-md-1 col-sm-6">
+                    <input type="submit" name="action" value="Add" />
+                </div>
+                <div class="col-md-1 col-sm-6">
+                    <input type="submit" name="action" value="Edit" />
+                </div>
+                <div class="col-md-1 col-sm-6">
+                    <input type="submit" name="action" value="Delete" />
+                </div>
+                <div class="col-md-1 col-sm-6">
+                    <input type="submit" name="action" value="Search" />
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </form:form>
 <br>
 <table border="1">
 	<th>ID</th>
@@ -47,5 +100,8 @@
 		</tr>
 	</c:forEach>
 </table>
+    <script src="<c:url value="/resources/assets/js/jquery.min.js"/>"></script>
+    <script src="<c:url value="/resources/assets/bootstrap/js/bootstrap.min.js"/>"></script>
 </body>
+
 </html>

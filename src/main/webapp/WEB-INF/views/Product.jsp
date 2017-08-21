@@ -3,69 +3,146 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<html>
-    <head>
-    </head>
-    <body>
-        <h3>Welcome, Enter The Product Details</h3>
-        <form:form method="POST" action="product.do" enctype="multipart/form-data" modelAttribute="product">
-             <table>
-             <tr>
-                    <td><form:label path="productid">Product Id</form:label></td>
-                    <td><form:input path="productid"/></td>
-                </tr>
-                <tr>
-                    <td><form:label path="productName">Product Name</form:label></td>
-                    <td><form:input path="productName"/></td>
-                </tr>
-		<tr>
-                    <td><form:label path="productDescription">Product Description</form:label></td>
-                    <td><form:input path="productDescription"/></td>
-                </tr>
-		<tr>
-                    <td><form:label path="price">Product Price</form:label></td>
-                    <td><form:input path="price"/></td>
-                </tr>
 
-                <tr>
-                    <td><form:label path="stock">Stock</form:label></td>
-                    <td><form:input path="stock"/></td>
-                </tr> 
-              <td><form:input type="file"
-							class=" btn btn-default btn-block form-control" path="image"
-							required="" /></td>
-				</tr>
-                
-          <tr>
-						<td><form:label class="btn btn-default btn-block" path="Supid">Supplier</form:label></td>
-								
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sports</title>
+    <link rel="stylesheet" href="<c:url value="/resources/assets/bootstrap/css/bootstrap.min.css"/>">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/fonts/font-awesome.min.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/styles.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Pretty-Header.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Pretty-Footer.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Google-Style-Login.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Pretty-Registration-Form.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Bootstrap-Payment-Form.css"/>">
+</head>
+
+<body>
+ <form:form method="POST" action="product.do" enctype="multipart/form-data" modelAttribute="product">
+    <div class="page-header">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand navbar-link" href="#"> </a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li role="presentation"><a href="#">Category </a></li>
+                        <li class="active" role="presentation"><a href="#">Product </a></li>
+                        <li role="presentation"><a href="#">Supplier </a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+        <h1>Welcome !!<small class="text-success"> Enter the Product Details</small></h1>
+        <div class="container">
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <form:label path="productid">Product Id</form:label>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                       <form:input class="form-control input-sm" path="productid" type="text"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <form:label path="productName">Product name</form:label>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <form:input class="form-control input-sm" path="productName" type="text"/>
+                    </div>
+                </div>
+            </div>
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <form:label path="productDescription">Description </form:label>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                       <form:input class="form-control input-sm" path="productDescription" type="text"/>
+                    </div>
+                </div>
+            </div>
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <form:label path="price">Price </form:label>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <form:input path="price" class="form-control input-sm" type="text"/>
+                    </div>
+                </div>
+            </div>
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <form:label path="stock">Stock </form:label>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <form:input path="stock" class="form-control input-sm" type="text"/>
+                    </div>
+                </div>
+            </div>
+            <div class="well">
+           
+                <div class="row">
+        <form:input type="file"class=" btn btn-default btn-block form-control" path="image"required="true" />
 							
-						<td><form:select path="Supid" class="form-control"
-								required="true">
-								<c:forEach items="${supplierList}" var="supplier">
-									<form:option class="form-control" value="${supplier.supplierid}">${supplier.supplierName}</form:option>
-								</c:forEach>
-							</form:select></td>
-					</tr>
-					<tr>
-						<td><form:label class="btn btn-default btn-block" path="Catid">Category</form:label></td>
-						<td><form:select class="form-control" path="Catid"
-								required="true">
-								<c:forEach items="${categoryList}" var="category">
-									<form:option class="form-control" value="${category.categoryId}">${category.categoryName}</form:option>
-								</c:forEach>
-							</form:select></td>
-					</tr>
-     <tr>
-   <td colspan="2">
-				<input type="submit" name="action" value="Add" />
-				<input type="submit" name="action" value="Edit" />
-				<input type="submit" name="action" value="Delete" />
-				<input type="submit" name="action" value="Search" />
-			</td>
-                </tr>
-            </table>
-     <br>       
+							
+							</div>
+							</div>
+        <div class="container">
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <form:label path="Catid">Category Id</form:label>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <form:input path="Catid" class="form-control input-sm" type="text"/>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <form:label path="Supid">supplierId</form:label>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <form:input path="Supid" type="text"/>
+                    </div>
+                </div>
+            </div>
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-1 col-sm-6">
+                        <input type="submit" name="action" value="Add" />
+                    </div>
+                    <div class="col-md-1 col-sm-6">
+                        <input type="submit" name="action" value="Edit" />
+                    </div>
+                    <div class="col-md-1 col-sm-6">
+                        <input type="submit" name="action" value="Delete" />
+                    </div>
+                    <div class="col-md-1 col-sm-6">
+                        <input type="submit" name="action" value="Search" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>       
             <table border="1">
 	<th>ID</th>
 	<th>Product name</th>
@@ -90,5 +167,8 @@
 	</c:forEach>	
     </table>
         </form:form>
-    </body>
+    <script src="<c:url value="/resources/assets/js/jquery.min.js"/>"></script>
+    <script src="<c:url value="/resources/assets/bootstrap/js/bootstrap.min.js"/>"></script>
+</body>
+
 </html>
