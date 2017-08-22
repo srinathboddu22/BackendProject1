@@ -5,6 +5,11 @@ ul.nav.navbar-nav.links{
 ul.nav.navbar-nav.links{
   font-size:30px;
 }
+body
+{
+	background-color: #696969;
+	
+}
 
 ul.nav.navbar-nav{
   padding-left:120px;
@@ -116,7 +121,7 @@ button.btn.btn-default.submit-button{
 }
 
 h1{
-  color:rgb(6,252,31);
+  color:red;
 }
 
 button.btn.btn-primary.btn-block.btn-lg.btn-signin{

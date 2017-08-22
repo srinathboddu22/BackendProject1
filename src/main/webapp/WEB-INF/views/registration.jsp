@@ -24,39 +24,16 @@
 </head>
 
 <body>
- <form:form action="saveUser" method="POST" modelAttribute="users">
-    <nav class="navbar navbar-inverse">
-       <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand navbar-link" href="#"> </a>
-                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-            </div>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Sport Items<span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="cricket">Cricket </a></li>
-                            <li role="presentation"><a href="football">Foot ball </a></li>
-                            <li role="presentation"><a href="batminton">Batminton </a></li>
-                        </ul>
-                    </li>
-                    <li class="active" role="presentation"><a href="#"><strong>Home</strong> </a></li>
-                     <sec:authorize access="!isAuthenticated()">
-                            <li><a href="register">Register</a></li>
-                      </sec:authorize>
-                       
-                   <li><a href="cart">Cart</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+
     <div class="row register-form">
         <div class="col-md-8 col-md-offset-2">
-            <form class="form-horizontal custom-form">
+       
+            <form:form  method="POST"  class="form-horizontal custom-form" action="saveUser" modelAttribute="users">
+            
                 <h1>Register Form</h1>
                 <div class="form-group">
                     <div class="col-sm-4 label-column">
-                        <form:label path="name" class="control-label" for="name-input-field">Name </form:label>
+                        <form:label path="name" class="control-label" >Name </form:label>
                     </div>
                     <div class="col-sm-6 input-column">
                         <form:input path="name" class="form-control" type="text"/>
@@ -64,32 +41,31 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-4 label-column">
-                        <form:label  class="control-label" path="email-input-field">Email </form:label>
+                        <form:label class="control-label" path="email" for="email-input-field">Email </form:label>
                     </div>
                     <div class="col-sm-6 input-column">
-                        <form:input  class="form-control"path="email" type="email"/>
+                        <form:input path="email" class="form-control" type="email" />
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-4 label-column">
-                        <form:label path="password" class="control-label" path="pawssword-input-field">Password </form:label>
+                        <form:label class="control-label" path="password" for="pawssword-input-field">Password </form:label>
                     </div>
                     <div class="col-sm-6 input-column">
-                        <form:input class="form-control" path="password" type="password"/>
+                        <form:input path="password" class="form-control" type="password"/>
                     </div>
                 </div>
-               <%-- <div class="checkbox">
-                    <form:label>
-                        <form:input type="checkbox"/>I've read and accept the terms and conditions</form:label>
-                </div> --%>
-                <button class="btn btn-default submit-button" type="button">Submit </button>
-            </form>
+                
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">I've read and accept the terms and conditions</label>
+                </div>
+                <button class="btn btn-default submit-button" type="submit">Submit Form</button>
+            </form:form>
         </div>
     </div>
     <script src="<c:url value="/resources/assets/js/jquery.min.js"/>"></script>
     <script src="<c:url value="/resources/assets/bootstrap/js/bootstrap.min.js"/>"></script>
-    
-    </form:form>
 </body>
 
 </html>

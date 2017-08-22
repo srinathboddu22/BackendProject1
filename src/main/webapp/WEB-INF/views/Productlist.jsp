@@ -20,14 +20,15 @@
 
 
 <div class="container">
+<div class="row">
 
 <c:forEach items="${Listpro}" var="product">
 
             
                 <div class="col-md-4 col-md-offset-0">
                     <div>
-                        <div class="row">
-                            <div class="col-md-12"><img atl="${product.productid}"
+                        <!-- <div class="row"> -->
+                            <div class="col-md-12"><img width=100px height=100px atl="${product.productid}"
 			src="<c:url value="/resources/images/${product.productid}.jpg"></c:url>">></div>
                             <div class="col-md-12">
                                 <h4>${product.productName}</h4>
@@ -46,9 +47,10 @@
                         </div>
                     </div>
                 
-                </div>
+                <!-- </div> -->
                 
            </c:forEach>
+        </div>
         </div>
        
 
