@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.springproject.model.Category;
 import com.springproject.model.Product;
 import com.springproject.model.Users;
 @Repository
@@ -30,16 +31,16 @@ public class UserDAOImpl implements UserDAO {
 		
 		return true;
 	}
-
-	public Users getUserById(int id) {
-		
-		return null;
+    @Transactional
+	public Users getUser(int userid) {
+		// TODO Auto-generated method stub
+		return (Users)sessionFactory.getCurrentSession().get(Users.class, userid);
 	}
-
-	public void removeUserById(int id) {
-		
-		
-}
+    @Transactional
+	public List getAllUser() {
+		// TODO Auto-generated method stub
+		return sessionFactory.getCurrentSession().createQuery("from Users").list();
+	}
 	
 	
 	@Transactional
@@ -62,6 +63,11 @@ public class UserDAOImpl implements UserDAO {
 	public List<Users> list() {
 	List<Users>users=	(List<Users>)sessionFactory.getCurrentSession().createQuery("from Users").list();
 		return users;
+	}
+
+	public void removeUserById(int id) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

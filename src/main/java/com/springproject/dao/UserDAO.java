@@ -9,7 +9,8 @@ public interface UserDAO {
 	
 	public boolean saveUser(Users users);
 	public List<Users> list();
-	  public Users getUserById(int id);
+	public Users getUser(int userid);
+	public List getAllUser();
 public void removeUserById(int id);
 	 public Users get(String email);
 

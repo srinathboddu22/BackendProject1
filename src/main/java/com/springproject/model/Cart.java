@@ -1,6 +1,5 @@
 package com.springproject.model;
 
-
 import java.util.HashSet;
 
 import java.util.Set;
@@ -19,7 +18,6 @@ public class Cart {
 	@Column(name="Cartid")
 	@GeneratedValue
 	private int id;
-	
 	private int userid;
 	private String productname;
 	private double productprice;
@@ -147,4 +145,3 @@ public class Cart {
 	
 	
 */
-

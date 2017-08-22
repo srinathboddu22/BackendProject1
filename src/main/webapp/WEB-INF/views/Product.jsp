@@ -97,7 +97,7 @@
             <div class="well">
            
                 <div class="row">
-        <form:input type="file"class=" btn btn-default btn-block form-control" path="image"required="true" />
+        <form:input type="file" class=" btn btn-default btn-block form-control" path="image" required="" />
 							
 							
 							</div>

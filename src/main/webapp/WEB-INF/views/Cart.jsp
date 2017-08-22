@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Cart</title>
+<title>Insert title here</title>
 </head>
 <body>
-${cart.pid}
-
+${cart.Proid}
 </body>
 </html>

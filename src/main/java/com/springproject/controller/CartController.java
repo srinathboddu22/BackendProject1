@@ -1,7 +1,5 @@
 package com.springproject.controller;
 
-
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.springproject.dao.CartDAO;
@@ -67,12 +66,34 @@ public class CartController {
     }
 
 	@RequestMapping("/cart")
-    public String CartDetails(Model model)   {
+    public String CartDetails(HttpSession session,Model model)   {
 		Cart cd = new Cart();
-		
-		model.addAttribute("cartList", cartDAO.getAllCartDetails());
+		int userId = (Integer) session.getAttribute("userid");
+	model.addAttribute("userid", userId);
+		model.addAttribute("cartList", cartDAO.getCartByUser(userId));
 		return "CartDetails";
     	
     }
-}
-
+	
+	@RequestMapping(value="cart.do/{id}", method=RequestMethod.POST)
+	public String CartOperations(@PathVariable("id") int id , @RequestParam String action,@RequestParam ("quantity") int qty, Model model){
+		
+		
+		Cart cartResult = new Cart();
+		if(action.equals("Delete")){
+			cartDAO.deleteCart(id);
+			cartResult = new Cart();
+		}
+		if(action.equals("Edit")){
+			Cart cart = cartDAO.getCart(id);
+			Product p = productDAO.getProduct(cart.getProductid());
+			cart.setQuantity(qty);
+			cart.setSubTotal(qty * p.getPrice());
+			cartDAO.saveProductToCart(cart);
+			
+		}
+		model.addAttribute("cartList", cartResult);
+		return "redirect:/cart.do"+id;
+	}
+	
+	}

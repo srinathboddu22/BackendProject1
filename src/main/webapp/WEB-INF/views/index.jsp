@@ -25,21 +25,24 @@
     <link rel="stylesheet" href="<c:url value="/resources/assets/css/Bootstrap-Payment-Form.css"/>">
 </head>
 
+
 <body>
     <header></header>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand navbar-link" href="#"> </a>
+                <a class="navbar-brand navbar-link" href="#">SportsHub </a>
                 <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
             </div>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Sport Items<span class="caret"></span></a>
+                    
+                    
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Categories <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="cricket">Cricket </a></li>
-                            <li role="presentation"><a href="football">Foot ball </a></li>
-                            <li role="presentation"><a href="batminton">Batminton </a></li>
+                           <c:forEach items="${categoryList}" var="category">
+                            <li role="presentation"><a href="product${category.categoryId}">${category.categoryName}</a></li>
+                            </c:forEach>
                         </ul>
                     </li>
                     <li class="active" role="presentation"><a href="#"><strong>Home</strong> </a></li>

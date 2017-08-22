@@ -20,6 +20,7 @@
 			<input name="j_password" id="merocode"  maxlength="15" class="form-control" />
 		</div>
 	</div>
+	<br>
 	<div class="form-group">
 	<label for="code" class="col-xs-4 control-label"></label>	
 		<div class="col-xs-4">
