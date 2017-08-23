@@ -33,4 +33,9 @@ public class HomeController {
 		return "Productlist";
 	}
 	
-}
+	@RequestMapping("/index")
+	public String Homepage()
+	{
+		return "redirect:/";
+	}
+	}

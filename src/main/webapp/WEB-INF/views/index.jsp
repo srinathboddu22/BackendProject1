@@ -87,7 +87,7 @@
 		
         <div class="row">
             <div class="col-md-4 col-sm-6">
-                <div class="thumbnail"><img width="100px" height="100px" src="<c:url value="/resources/images/${product.productid }.jpg" ></c:url>">
+                <div class="thumbnail"><img width="150px" height="150px" src="<c:url value="/resources/images/${product.productid }.jpg" ></c:url>">
                     <div class="caption">
                         <h3>${product.productName }</h3>
                         <p>${product.productDescription }</p>
