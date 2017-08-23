@@ -1,6 +1,9 @@
 package com.springproject.model;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
+import org.springframework.stereotype.Component;
+
+@Component
 @Entity
 @Table(name="User_Details")
 public class Users{
