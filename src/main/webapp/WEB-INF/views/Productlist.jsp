@@ -17,7 +17,8 @@
 <body>
 
 
-
+<h1></h1>
+<h3>Sport Items</h3>
 
 <div class="container">
 <div class="row">
@@ -32,7 +33,7 @@
 				<img width="100px" height="100px" class="img-responsive" style="padding-top: 5px" src="/BackendProject1/myImage/imageDisplay?id=${product.productid}" />
 				</div>
                             <div class="col-md-12">
-                                <h4>${product.productName}</h4>
+                                <h4><Strong>${product.productName}</Strong></h4>
                                 <p>
                                 <ul>
                                 

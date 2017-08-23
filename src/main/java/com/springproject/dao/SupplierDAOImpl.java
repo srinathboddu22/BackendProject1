@@ -28,17 +28,17 @@ public class SupplierDAOImpl implements SupplierDAO {
 		sessionFactory.getCurrentSession().saveOrUpdate(supplier);
 		return true;
 	}
-
+	@Transactional
 	public void add(Supplier supplier) {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(supplier);
 	}
-
+	@Transactional
 	public void edit(Supplier supplier) {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().update(supplier);
 	}
-
+	@Transactional
 	public void delete(int Supid) {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().delete(getSupplier(Supid));
@@ -48,7 +48,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 		// TODO Auto-generated method stub
 		return (Supplier)sessionFactory.getCurrentSession().get(Supplier.class, Supid);
 	}
-
+	@Transactional
 	public List getAllSupplier() {
 		// TODO Auto-generated method stub
 		return sessionFactory.getCurrentSession().createQuery("from Supplier").list();
