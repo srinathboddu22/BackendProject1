@@ -21,9 +21,10 @@
 		<thead>
 		<tr>
 	
-	<!-- <th>image</th>
 	
-	 --><th>Product name</th>
+	
+	 <th>Product name</th>
+	 <th></th>
 	<th>product price</th>
 	<th>Quantity</th>
 	<th>updated Quantity</th>
@@ -39,6 +40,10 @@
 		<tr>
 			<%-- <td>${cd.id}</td>
 			 --%><td>${cd.productname}</td>
+			 
+			  <td><div class="thumbnail">
+				<img width="100px" height="100px" class="img-responsive" style="padding-top: 5px" src="/BackendProject1/myImage/imageDisplay?id=${product.productid}" />
+				</div></td>
 
 			<td>${cd.productprice}</td>
 			<td>
@@ -52,10 +57,7 @@
 				</td>
 				
 			
-			 <td><div class="thumbnail">
-			<img height="100px" width="100px" atl="${product.productid}"
-			src="<c:url value="/resources/images/${product.productid}.jpg"></c:url>">
-			</div></td> 
+			
 			
 			
 		</tr>
@@ -67,9 +69,10 @@
 </div>
 </div>
 </table>
+<form:form  action="${userid}">
 <a href="index" class="btn btn-danger" role="button">Continue Shopping</a>
-<a href="${cd.userid}" class="btn btn-success" role="button">CheckOut</a>
-
+<button  class="btn btn-success" type="submit">CheckOut</button>
+</form:form>
 <script src="<c:url value="resources/assets/js/jquery.min.js"/>"></script>
     <script src="<c:url value="resources/assets/bootstrap/js/bootstrap.min.js"/>"></script>
  

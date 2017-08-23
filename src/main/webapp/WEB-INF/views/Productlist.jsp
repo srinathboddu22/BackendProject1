@@ -28,15 +28,16 @@
                 <div class="col-md-4 col-md-offset-0">
                     <div>
                         <!-- <div class="row"> -->
-                            <div class="col-md-12"><img width=100px height=100px atl="${product.productid}"
-			src="<c:url value="/resources/images/${product.productid}.jpg"></c:url>">></div>
+                            <div class="thumbnail">
+				<img width="100px" height="100px" class="img-responsive" style="padding-top: 5px" src="/BackendProject1/myImage/imageDisplay?id=${product.productid}" />
+				</div>
                             <div class="col-md-12">
                                 <h4>${product.productName}</h4>
                                 <p>
                                 <ul>
-                                <li> ${product.price}</li>
+                                
                                 <li> ${product.productDescription}</li>
-                               
+                               <li>Price: Rs.<Strong>${product.price}</Strong></li>
                                 <li>
                                 <form:form action="addToCart/${product.productid}" method="POST">
                                 <input type="submit" value="Add to Cart" class="btn btn-primary">

@@ -97,7 +97,7 @@
             <div class="well">
            
                 <div class="row">
-        <form:input type="file" class=" btn btn-default btn-block form-control" path="image" required="" />
+        <input type="file" class=" btn btn-default btn-block form-control" name="file" required="" />
 							
 							
 							</div>
@@ -159,9 +159,8 @@
 			<td>${product.price}</td>
 			<td>${product.stock}</td>
 			<td><div class="thumbnail">
-								<img height="100px" width="100px" alt="${product.productid }"
-									src="<c:url value="/resources/images/${product.productid }.jpg"></c:url>">
-							</div></td>
+				<img width="100px" height="100px" class="img-responsive" style="padding-top: 5px" src="/BackendProject1/myImage/imageDisplay?id=${product.productid}" />
+				</td>
 			
 		</tr>	
 	</c:forEach>	
