@@ -72,11 +72,15 @@
             <a class="right carousel-control" href="#carousel-1" role="button" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i><span class="sr-only">Next</span></a>
         </div>
         <ol class="carousel-indicators">
-            <li data-target="#carousel-1" data-slide-to="0"></li>
+            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
             <li data-target="#carousel-1" data-slide-to="1"></li>
             <li data-target="#carousel-1" data-slide-to="2"></li>
-            <li data-target="#carousel-1" data-slide-to="3" class="active"></li>
+            <li data-target="#carousel-1" data-slide-to="3"></li>
         </ol>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
     <div class="jumbotron">
         <h2 class="text-center text-success"> Buy Sport kits Online</h2>

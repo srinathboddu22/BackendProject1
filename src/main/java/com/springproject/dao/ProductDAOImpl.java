@@ -20,6 +20,11 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Autowired
 	SessionFactory sessionFactory;
+	
+	public ProductDAOImpl(SessionFactory sessionfactory) {
+		super();
+		this.sessionFactory=sessionFactory;
+	}
 
 	@Transactional
 	public boolean saveProduct(Product product) {

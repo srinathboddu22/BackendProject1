@@ -50,9 +50,12 @@ public class RegistrationController {
 	 
 	
 	@RequestMapping(value="/saveUser",method = RequestMethod.POST)
-public String addUser(@ModelAttribute("users")Users users)
+public String addUser(@ModelAttribute("users")Users users,BindingResult result)
 {
-		
+		if(result.hasErrors())
+		{
+			return "registration";
+		}
 		users.setRole("ROLE_USER");
 		users.setEnabled(true);
 		userDAO.saveUser(users);
