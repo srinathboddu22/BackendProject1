@@ -14,6 +14,7 @@ import com.springproject.model.Users;
 import com.springproject.service.CategoryService;
 import com.springproject.model.Category;
 import com.springproject.dao.CategoryDAO;
+import com.springproject.dao.ProductDAO;
 
 
 @Controller
@@ -24,7 +25,8 @@ public class RegistrationController {
 	UserDAO userDAO;
 	@Autowired
 	private CategoryService categoryService;
-	
+	@Autowired
+	ProductDAO productDAO;
 	
 	@RequestMapping(value="/",method=RequestMethod.GET)
 	public String landPage(Map<String, Object> map,@ModelAttribute("Users")Users users,BindingResult result,Model model)
@@ -32,6 +34,7 @@ public class RegistrationController {
 		Category category = new Category();
 		map.put("category", category);
 		map.put("categoryList",categoryService.getAllCategory());
+		map.put("HomeList" , productDAO.homeList());
 		return "index";
 		
 	}

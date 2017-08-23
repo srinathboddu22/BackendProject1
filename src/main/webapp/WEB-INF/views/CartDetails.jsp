@@ -53,7 +53,7 @@
 				
 			
 			 <td><div class="thumbnail">
-			<img height="200px" width="200px" atl="${product.productid}"
+			<img height="100px" width="100px" atl="${product.productid}"
 			src="<c:url value="/resources/images/${product.productid}.jpg"></c:url>">
 			</div></td> 
 			
@@ -63,12 +63,12 @@
 	
 	</tbody>	
 	
-</table>
-<a href="index" class="btn btn-danger" role="button">Continue Shopping</a>
-<a href="${cd.userid}" class="btn btn-success" role="button">CheckOut</a>
 </c:forEach>
 </div>
 </div>
+</table>
+<a href="index" class="btn btn-danger" role="button">Continue Shopping</a>
+<a href="${cd.userid}" class="btn btn-success" role="button">CheckOut</a>
 
 <script src="<c:url value="resources/assets/js/jquery.min.js"/>"></script>
     <script src="<c:url value="resources/assets/bootstrap/js/bootstrap.min.js"/>"></script>

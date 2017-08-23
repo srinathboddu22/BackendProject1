@@ -37,7 +37,7 @@
                 <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
             </div><h3>SportsHub</h3> 
             <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-center">
                     
 
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Categories <span class="caret"></span></a>
@@ -83,14 +83,16 @@
         <p class="text-center text-primary"> Don't wait for the perfect moment</p>
         <p class="text-center text-primary">Take a moment and make it perfect!!</p>
         <p></p>
+        <c:forEach items="${HomeList}" var="product">
+		
         <div class="row">
             <div class="col-md-4 col-sm-6">
-                <div class="thumbnail"><img src="<c:url value="/resources/assets/img/batt.jpg"/>">
+                <div class="thumbnail"><img width="100px" height="100px" src="<c:url value="/resources/images/${product.productid }.jpg" ></c:url>">
                     <div class="caption">
-                        <h3>Cricket Bats</h3>
-                        <p>Kookaburra Kahuna 40 Kashmir willow Cricket Bat</p>
-                        <p>Rs. 2999/-</p>
-                        <p>Upto 50% off</p>
+                        <h3>${product.productName }</h3>
+                        <p>${product.productDescription }</p>
+                        <p>${product.price }</p>
+                        <p></p>
                         <li>
                                 <form:form action="addToCart/${product.productid}" method="POST">
                                 <input type="submit" value="Add to Cart" class="btn btn-primary">
@@ -98,30 +100,12 @@
                                 </li>
                     </div>
                 </div>
+                
             </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="thumbnail"><img src="<c:url value="/resources/assets/img/badminton-rackets.jpg"/>">
-                    <div class="caption">
-                        <h3>Yonex Batminton Rockets</h3>
-                        <p>Yonex Muscle Power 2 G4 Strung(Aluminium, Assorted)</p>
-                        <p>Rs. 3499/-</p>
-                        <p>Upto 40% off</p>
-                        <p class="text-success">Shop Now !</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="thumbnail"><img src="<c:url value="/resources/assets/img/football bal.jpeg"/>">
-                    <div class="caption">
-                        <h3>Foot balls</h3>
-                        <p>Adidas Confed Glider Football-size:5(pack of 1, multicolor)</p>
-                        <p>Rs. 1799/-</p>
-                        <p>Upto 29% off</p>
-                        <p class="text-success">Shop Now !</p>
-                    </div>
-                </div>
-            </div>
+           
+          
         </div>
+        </c:forEach>
     </div>
     <footer>
         <div class="row">

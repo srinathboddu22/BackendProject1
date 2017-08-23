@@ -105,7 +105,7 @@ small.text-success{
 }
 
 label{
-  color:#f50606;
+  color:#000000;
 }
 
 button.btn.btn-default{
@@ -133,6 +133,7 @@ label{
 }
 
 .login-card label{
+	background-color:darkgrey;
   color:#0ff919;
   font-size:larger;
 }
