@@ -113,6 +113,13 @@
     <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
     <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
     
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>5.4.1.Final</version>
+</dependency>
+    
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

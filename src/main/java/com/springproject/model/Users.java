@@ -1,5 +1,6 @@
 package com.springproject.model;
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 @Entity
 @Table(name="User_Details")
 public class Users{
@@ -7,7 +8,10 @@ public class Users{
 	@Id
 	@GeneratedValue
 	private int id;
-	private String name,email,password,role;
+	private String name,email,role;
+	
+	@Size(min=2,max=6,message="hello ")
+	private String password;
 	
 	private boolean enabled;
 	public int getId() {
