@@ -73,27 +73,15 @@ public class ProductController {
 	
 	
 	@RequestMapping(value="/product.do", method=RequestMethod.POST)
-	public String doActions(RedirectAttributes attributes,HttpServletRequest request,@ModelAttribute Product product, BindingResult result, @RequestParam String action, Map<String, Object> map,Model model)
+	public String doActions(RedirectAttributes attributes,HttpServletRequest request,@ModelAttribute Product product, BindingResult result, @RequestParam String action, Map<String, Object> map,Model model,
+			@RequestParam("file") MultipartFile file)
             		throws Exception
 	{
 		Product productResult = new Product();
 		 if (action.equals("Add"))
 		 {
 			 productResult = product;
-			 MultipartFile file=product.getImage();
-				String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-		        path = Paths.get(rootDirectory + "\\resources\\images\\"+product.getProductid()+".jpg");
-		        if (file != null && !file.isEmpty()) {
-		            try {
-		            	System.out.println("Image Saving Start");
-		            	file.transferTo(new File(path.toString()));
-		            	System.out.println("Image Saved");
-		            } catch (Exception e) {
-		                e.printStackTrace();
-		                System.out.println("Error");
-		                throw new RuntimeException("item image saving failed.", e);
-		            }
-		        }
+        product.setImage(file.getBytes());
 		        productService.add(product);
 		 }
 			 
@@ -120,8 +108,3 @@ public class ProductController {
 		return "Product";
 	}
 	}
-	
-	
-	
-	
-

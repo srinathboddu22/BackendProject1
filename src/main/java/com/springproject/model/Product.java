@@ -2,11 +2,14 @@ package com.springproject.model;
 
 
 import java.io.Serializable;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -16,7 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Component
-@Table(name="Product_details")
+@Table(name="Product")
 
 
 
@@ -25,11 +28,12 @@ public class Product implements Serializable
 	private static final long serialVersionUID = 1L; 
 	@Id
 	@GeneratedValue
+	
 	private int productid; 
 	private String productName;
 	private String productDescription;
-	@Transient
-	private MultipartFile image;
+	@Lob
+	private byte image[];
 	private int Catid;
 	private int Supid ;
 	private int price;
@@ -43,6 +47,8 @@ public class Product implements Serializable
     @ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="Supid",updatable=false, insertable=false ,nullable=false  )
     private Supplier supplier;
+    
+    
     
 
 	public int getProductid() {
@@ -68,6 +74,8 @@ public class Product implements Serializable
 	public void setProductDescription(String productDescription) {
 		this.productDescription = productDescription;
 	}
+
+	
 
 	public int getPrice() {
 		return price;
@@ -116,14 +124,13 @@ public class Product implements Serializable
 		this.supplier = supplier;
 	}
 	
-	
-	public MultipartFile getImage() {
+
+	public byte[] getImage() {
 		return image;
 	}
-
-	public void setImage(MultipartFile image) {
+	public void setImage(byte[] image) {
 		this.image = image;
-	}
+}
 
 
 	public static long getSerialversionuid() {
