@@ -18,13 +18,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.springproject.dao.CategoryDAO;
 import com.springproject.dao.CategoryDAOImpl;
-import com.springproject.dao.ProductDAO;
-import com.springproject.dao.ProductDAOImpl;
-import com.springproject.dao.SupplierDAO;
-import com.springproject.dao.SupplierDAOImpl;
 import com.springproject.dao.UserDAO;
 import com.springproject.dao.UserDAOImpl;
-import com.springproject.model.Card;
 import com.springproject.model.Cart;
 import com.springproject.model.Category;
 import com.springproject.model.Product;
@@ -64,13 +59,12 @@ public class HbConfig {
 	public SessionFactory getSessionFactory(DataSource dataSource) {
 		LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
 		sessionBuilder.addProperties(getHibernateProperties());
-		//sessionBuilder.scanPackages("com.springproject");
+		sessionBuilder.scanPackages("com.springproject");
 		sessionBuilder.addAnnotatedClasses(Users.class);
 		sessionBuilder.addAnnotatedClasses(Category.class);
 		sessionBuilder.addAnnotatedClasses(Product.class);
-		sessionBuilder.addAnnotatedClasses(Supplier.class);
 		sessionBuilder.addAnnotatedClasses(Cart.class);
-		sessionBuilder.addAnnotatedClasses(Card.class);
+		sessionBuilder.addAnnotatedClasses(Supplier.class);
 		System.out.println("Session");
 		
 		return sessionBuilder.buildSessionFactory();
@@ -92,7 +86,6 @@ public class HbConfig {
 	}
 	
 	
-
 	@Autowired
 	@Bean(name = "categoryDAO")
 	public CategoryDAO getcategoryDetailsDAO(SessionFactory sessionFactory) {
@@ -102,15 +95,4 @@ public class HbConfig {
 	
 	*/
 	
-	@Autowired
-	@Bean(name = "supplierDAO")
-	public SupplierDAO getsupplierDetailsDAO(SessionFactory sessionFactory) {
-			return new SupplierDAOImpl(sessionFactory);
-	}
-	
-	@Autowired
-	@Bean(name = "productDAO")
-	public ProductDAO getproductDetailsDAO(SessionFactory sessionFactory) {
-			return new ProductDAOImpl(sessionFactory);
-	}
 }

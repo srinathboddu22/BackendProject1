@@ -7,12 +7,17 @@
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart Details</title>
-    <link rel="stylesheet" href="<c:url value="resources/assets/bootstrap/css/bootstrap.min.css"/>">
-    <link rel="stylesheet" href="<c:url value="resources/assets/css/styles.css"/>">
-    <link rel="stylesheet" href="<c:url value="resources/assets/css/category.css"/>">
-
+    <link rel="stylesheet" href="<c:url value="/resources/assets/bootstrap/css/bootstrap.min.css"/>">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/fonts/font-awesome.min.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/styles.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Pretty-Footer.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Google-Style-Login.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Pretty-Registration-Form.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/untitled.css"/>">
 </head>
 <body>
+<h1></h1>
  <div class="container">
         <div class="well">     
 <c:forEach items="${cartList}" var="cd">
@@ -24,7 +29,7 @@
 	
 	
 	 <th>Product name</th>
-	 <th></th>
+	 
 	<th>product price</th>
 	<th>Quantity</th>
 	<th>updated Quantity</th>
@@ -41,10 +46,7 @@
 			<%-- <td>${cd.id}</td>
 			 --%><td>${cd.productname}</td>
 			 
-			  <td><div class="thumbnail">
-				<img width="100px" height="100px" class="img-responsive" style="padding-top: 5px" src="/BackendProject1/myImage/imageDisplay?id=${product.productid}" />
-				</div></td>
-
+			  
 			<td>${cd.productprice}</td>
 			<td>
 			<input  class="form-control" type="text" name="quantity" value="1"></input>

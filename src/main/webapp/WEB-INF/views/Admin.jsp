@@ -9,15 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" href="<c:url value="/resources/assets/bootstrap/css/bootstrap.min.css"/>">"
+    <link rel="stylesheet" href="<c:url value="/resources/assets/bootstrap/css/bootstrap.min.css"/>">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/fonts/font-awesome.min.css"/>">
     <link rel="stylesheet" href="<c:url value="/resources/assets/css/styles.css"/>">
-    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Admin.css"/>">
-     <script src="<c:url value="/resources/assets/js/jquery.min.js"/>"></script>
-    <script src="<c:url value="/resources/assets/bootstrap/js/bootstrap.min.js"/>"></script>
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Pretty-Footer.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Google-Style-Login.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Pretty-Registration-Form.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/untitled.css"/>">
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>

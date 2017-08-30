@@ -12,13 +12,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untitled</title>
-    <link rel="stylesheet" href="<c:url value= "/resources/assets/bootstrap/css/bootstrap.min.css"/>">
-    <link rel="stylesheet" href="<c:url value= "/resources/assets/fonts/font-awesome.min.css"/>">
-  <!--   <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/invoice.css">
-   -->  <link rel="stylesheet" href="<c:url value= "/resources/assets/css/Bootstrap-Payment-Form.css"/>">
-    <link rel="stylesheet" href="<c:url value= "/resources/assets/css/payment.css"/>">
+    <title>Check Out</title>
+    <link rel="stylesheet" href="<c:url value="/resources/assets/bootstrap/css/bootstrap.min.css"/>">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/fonts/font-awesome.min.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/styles.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Pretty-Footer.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Google-Style-Login.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Pretty-Registration-Form.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/untitled.css"/>">
 </head>
 
 <body>

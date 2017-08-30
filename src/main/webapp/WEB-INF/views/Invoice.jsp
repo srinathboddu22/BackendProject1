@@ -10,9 +10,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Invoice</title>
  <link rel="stylesheet" href="<c:url value="/resources/assets/bootstrap/css/bootstrap.min.css"/>">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/fonts/font-awesome.min.css"/>">
     <link rel="stylesheet" href="<c:url value="/resources/assets/css/styles.css"/>">
-    <link rel="stylesheet" href="<c:url value="/resources/assets/css/invoice.css"/>">
-
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Pretty-Footer.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Google-Style-Login.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/Pretty-Registration-Form.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/untitled.css"/>">
 </head>
 <body>
  <form:form modelAttribute="user" commandName="user">
@@ -30,7 +34,7 @@
                     <label>email:${user.email} </label>
                 </div>
             </div>
-          <%--   <div class="row">
+           <%--  <div class="row">
                 <div class="col-md-4">
                     <label>contact no:${user.contact_no} </label>
                 </div>
@@ -39,7 +43,7 @@
                 <div class="col-md-4">
                     <label>Shipping Address:${user.address} </label>
                 </div>
-            </div --%>>
+            </div> --%>
             <hr>
         </div>
     </div>
@@ -108,11 +112,9 @@
        <button class="btn btn-danger">Continue Shopping</button>
  </form:form>         
  
+     <script src="<c:url value="/resources/assets/js/print.js"/>"></script>
     <script src="<c:url value="/resources/assets/js/jquery.min.js"/>"></script>
     <script src="<c:url value="/resources/assets/bootstrap/js/bootstrap.min.js"/>"></script>
-    
-    </div>
-    </div>
 
 </body>
 </html>

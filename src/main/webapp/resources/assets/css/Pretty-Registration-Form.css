@@ -17,7 +17,7 @@
 
 .register-form .custom-form h1{
   display:inline-block;
-  color:red;
+  color:#4c565e;
   font-size:24px;
   font-weight:bold;
   padding:0 10px 15px;
@@ -86,5 +86,13 @@
   border:0;
   margin:30px;
   outline:none;
+}
+
+form.form-horizontal.custom-form{
+  background-color:#094a5f;
+}
+
+h1{
+  color:#82e801;
 }
 

@@ -45,10 +45,12 @@ public class CartController {
 			System.out.println(item);
 			item.setProductprice(p.getPrice());
 			model.addAttribute("message", p.getProductName() +"is already exist");
-			item.setSubTotal(item.getProductprice() + (q*p.getPrice()));
 			cartDAO.saveProductToCart(item);
-			return "ProductList";
-		} else {
+			item.setSubTotal(item.getQuantity()*p.getPrice());
+			cartDAO.saveProductToCart(item);
+			return "redirect:/cart";
+		} 
+    	else {
 			Cart item = new Cart();
 			Product p = productDAO.getProduct(id);
 			item.setProductid(p.getProductid());
